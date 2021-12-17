@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella&Buona</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@100;500;600&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJK7P5K3FD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NJK7P5K3FD');
+    </script>
+    <script src="https://kit.fontawesome.com/f27022c870.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <img src="img/Logo scritta.png" alt="" id="logo" class="mx-2">
+          </a>
+          <div class="btn-menu">
+            <a href="">
+              <img src="img\header\telephone.png" alt="">
+            </a>
+            <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it">
+              <img src="img\header\placeholder.png" alt="">
+            </a>
+            <a href="https://qrco.de/bcbqQf ">
+              <img src="img\header\menu.png" alt="">
+            </a>
+          </div>
+    </header>
+
+    <main>
+        <section class="home">
+            <img src="img\Logo.png" alt="">
+        </section>
+     
+        <section class="carousel">
+            <div id="app">
+                <div class="container">
+                    <div class="slider">
+                            <img :src="images[counter]" alt="">
+                            <div class="buttons">   
+                                <div @click="prevSlide" class="prev"> < </div>
+                                <div @click="nextSlide" class="next"> > </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="orari container-fluid">
+            <div class="row">
+                <div class="col-12 pb-3 pt-5">
+                    <h2><span>Orari:</span></h2>
+                    <div class="line"></div>
+                </div>  
+                <div class="row pb-3">
+                    <div class="col-12 col-sm-6 ">
+                        <h3 class="row-red">Aperti a pranzo:</h3>
+                        <h2 class="hour">11:00 - 13:30</h2>
+                    </div> 
+                    <div class="col-12 col-sm-6">
+                        <h3 class="row-red">e a cena:</h4>
+                        <h2 class="hour">17:00 - 22:30</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="pb-3 row-red">Disponibili anche per consegna a domicilio:</h3>
+                        <h2 class="pb-3 hour">18:00 - 20:30</h2>
+                        <h3 class="pb-5">Siamo chiusi il <span>lunedì</span></h3>
+                    </div>
+                </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Clicca qui per vedere i menù:</h2>
+            <div class="line"></div>
+            <div class="btn-menu">
+                <a href="" class="btn">Menù <br> Asporto</a>
+                <a href="https://qrco.de/bcbqQf" class="btn" id="btn-red">Menù <br> Sala</a>
+            </div>
+        </section>
+
+        <div class="about-us">
+            <section class="col-12" id="AboutUs">
+                <div class="box">
+                    <h2>Chi siamo:</h2>
+                    <div class="line mb-4"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maxime quam earum excepturi blanditiis, ratione dignissimos possimus aliquam, est minus laborum quo quisquam sunt? Cum adipisci reprehenderit maxime doloremque? Natus.</p>
+                </div>
+                <div class="box">
+                    <div class="bg" id="bg1"></div>
+                </div>                                        
+            </section>
+            <section class="col-12" id="OurProducts">
+                <div class="box">
+                    <div class="bg" id="bg2"></div>
+                </div>
+                <div class="box">
+                    <h2>I nostri prodotti:</h2>
+                    <div class="line mb-4"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maxime quam earum excepturi blanditiis, ratione dignissimos possimus aliquam, est minus laborum quo quisquam sunt? Cum adipisci reprehenderit maxime doloremque? Natus.</p>
+                    <p>Clicca qui sotto per saperne di più sulle nostre teglie!</p>
+                    <a href="" class="btn mb-4">Scopri di più</a>
+                </div>
+            </section>
+        </div>
+
+        <section class="certificati">
+            <h2>I nostri certificati:</h2>
+            <div class="line mb-4"></div>
+            <div id="elenco">
+                <div class="col-4">
+                    <img src="img/certificato/Logo GWR 1.png" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="img/certificato/images.png" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="img/certificato/Logo GWR 2.png" alt="">
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
+                    <img src="img/Logo scritta.png" alt="" class="pt-4 pb-4 px-2">
+                    <div class="pb-1 pt-2">© 2021 Pizzeria Bella&Buona di Barbera Giuseppe</div>
+                    <div class="pb-1">P.iva: 000000000</div>
+                    <div>Privacy Policy ....</div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
+                    <h5>Giorni e orari:</h5>
+                    <div class="pb-1">Aperti tutti i giorni tranne il lunedì</div>
+                    <div class="pb-1">Dalle 11:00 alle 13:30, dalle 17:00 alle 22:30</div>
+                    <div>Consegna a domicilio, <br> ogni sera dalle 18:00 alle 20:30</div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
+                    <h5>Contatti:</h5>
+                    <div class="pb-2">Via Giuseppe Marconi 10d, Agnosine - BS</div>
+                    <h4>0365 187 0283 </h4>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
+                    <h5>Follow us:</h5>
+                    <a href="https://www.instagram.com/bellaebuonaagnosine/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/bellaebuonaagnosine"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
