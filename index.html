@@ -40,44 +40,67 @@
     <script src="https://kit.fontawesome.com/f27022c870.js" crossorigin="anonymous"></script>
 </head>
 
-<body >
-    <header id="app">
-        <div class="upper-header">
-            <a href="#home">
-                <img src="img/Logo scritta.png" alt="" id="logo" class="mx-2">
-            </a>
-            <div class="btn-menu">
-                <a href="tel:0365 187 0283">
-                    <img src="img\header\telephone.png" alt="">
-                </a>
-                <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it">
-                    <img src="img\header\placeholder.png" alt="">
-                </a>
-                <a 
-                @click="toggleMenu">
-                    <img src="img\header\menu.png" alt="">
-                </a>
-            </div>
+<body>       
+    <header class="home" id="home">
+        <div v-if="burger_close">
+            <i @click="toggleBurger"
+            class="fas fa-bars"></i>
         </div>
-        <div v-if="menu_close" 
-        class="lower-menu">
-            <div class="riga">
-                <a href="https://qrco.de/bcbqQf">Menu asporto</a>
-            </div>
-            <div class="riga">
-                <a href="https://qrco.de/bcbqQf">Menu sala</a>
-            </div>
+        <div v-else
+        class="burger">
+            <i @click="toggleBurger"
+            class="fas fa-times"></i>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#orari">Orari</a>
+                </li>
+                <li>
+                    <a href="#menu">Menu</a>
+                </li>
+                <li>
+                    <a href="eventi.html">Eventi</a>
+                </li>
+            </ul>
         </div>
-        <div v-else></div>
+        <img src="img\Logo.png" alt="">
     </header>
-
+    
     <main>
-        <section class="home" id="home">
-            <img src="img\Logo.png" alt="">
-        </section>
-     
 
-        <section class="orari container-fluid">
+        <section class="navigator" id="app"> 
+            <div class="upper-nav">
+                <a href="#home">
+                    <img src="img/Logo scritta.png" alt="" id="logo" class="mx-2">
+                </a>
+                <div class="btn-menu">
+                    <a href="tel:0365 187 0283">
+                        <img src="img\icone\telephone.png" alt="">
+                    </a>
+                    <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it">
+                        <img src="img\icone\placeholder.png" alt="">
+                    </a>
+                    <a 
+                    @click="toggleMenu">
+                        <img src="img\icone\menu.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div v-if="menu_close" 
+            class="lower-nav">
+                <div class="riga">
+                    <a href="https://qrco.de/bcbqQf">Menu asporto</a>
+                </div>
+                <div class="riga">
+                    <a href="https://qrco.de/bcbqQf">Menu sala</a>
+                </div>
+            </div>
+            <div v-else></div>
+        </section>
+
+        <section class="orari container-fluid" id="orari">
             <div class="row">
                 <div class="col-12 pb-3 pt-5">
                     <h2><span class="italic">Orari:</span></h2>
@@ -109,7 +132,7 @@
                 </div>
         </section>
 
-        <section class="menu-section">
+        <section class="menu-section" id="menu">
             <h2>Clicca qui per vedere i menù:</h2>
             <div class="line"></div>
             <div class="btn-menu">
@@ -118,6 +141,7 @@
             </div>
         </section>
 
+
         <div class="about-us">
             <section class="col-12" id="AboutUs">
                 <div class="box">
@@ -125,7 +149,7 @@
                     <div class="line mb-4"></div>
                     <p>Pizzeria Bella&Buona nasce dalla passione e dall'esperienza pluriennale maturate nel settore della ristorazione da Giuseppe Barbera alias Beppe. <br>
                         Per molti anni ha già operato in Vallesabbia con Bep's Pizza a Sabbio Chiese, Amalfitana a Vobarno e, dopo un’esperienza in Spagna, è nata l’idea di un nuovo locale con un’innovativa focaccia in teglia. <br>
-                        La professionalità e l’alta formazione hanno permesso a Beppe di diventare un rinomato Master Chef NIP e di vincere due Guinness World Record.</p>
+                        La professionalità e l’alta formazione hanno permesso a Beppe di diventare un rinomato Master Chef NIP e di vincere due Guinness World Records.</p>
                 </div>
                 <div class="box">
                     <div class="bg" id="bg1"></div>
@@ -197,5 +221,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 </html>
