@@ -10,12 +10,16 @@
 
 
 /*Inizio header*/
-
 header{
-    /*background-color: $brandColorTwo;*/
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgba(255, 255, 255, 0.959);
     position: absolute;
     position: fixed;
+    width: 100%;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.164);   
+}
+
+.upper-header{
+    /*background-color: $brandColorTwo;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,6 +44,7 @@ header .btn-menu a{
     width: 40px;
     height: 100%;
     margin-right: 15px;  
+    cursor: pointer;
 }
 
 header .btn-menu img{
@@ -47,6 +52,28 @@ header .btn-menu img{
     height: 100%;
 }
 
+.lower-menu{
+    width: 100%;
+}
+
+.lower-menu .riga{
+    padding: 10px;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.164); 
+    display: flex;
+    
+}
+
+.lower-menu a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (min-width: 800px) {
+    header{
+        display: none;
+    }
+}
 
 /*Fine Header*/
 
@@ -59,7 +86,7 @@ main{
 .home{
     width: 100%;
     height: 100vh;
-    background-image: url("../img/pizza-home.png");
+    background-image: url("../img/foto-trancio.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -121,55 +148,6 @@ main{
 }
 /*Fine Home */
 
-/*Inzio Carousel photo*/
-
-.carousel{
-    background-color: #fbb901;
-}
-
-.carousel .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel .slider{
-    width: 100%;
-}
-
-.carousel .prev, .carousel .next{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, .5);
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.carousel .next{
-    right: 0;
-}
-
-.carousel .prev{
-    left: 0;
-}
-
-.carousel .prev:hover, .carousel .next:hover{
-    background-color: white;
-}
-
-.carousel img{
-    width: 100%;
-}
-
-/*Fine Carpusel photo*/
-
-
 /* Inizio Orari */
 
 .orari{
@@ -207,9 +185,13 @@ main{
     font-size: 38px;
 }
 
-.orari span{
+.orari .italic{
     text-transform: uppercase;
     font-style: italic;
+}
+
+.orari .red{
+    color: #e30713;
 }
 /* Fine Orari*/
 
@@ -220,6 +202,7 @@ main{
     flex-direction: column;
     align-items: center;
     margin: 40px 0;  
+    color: black;
 }
 
 .menu-section h2{
@@ -300,7 +283,7 @@ main{
 }
 
 #bg2{
-    background-image: url("../img/foto-trancio.png");
+    background-image: url("../img/pizza-home.png");
 }
 
 .about-us p{
@@ -443,4 +426,7 @@ footer a{
     margin-right: 15px;
 }
 
+#address{
+    font-size: 20px;
+}
 /*Fine footer*/

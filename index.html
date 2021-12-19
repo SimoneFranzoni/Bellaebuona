@@ -18,50 +18,69 @@
     gtag('js', new Date());
     gtag('config', 'G-NJK7P5K3FD');
     </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '311444523992710'); 
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" 
+        src="https://www.facebook.com/tr?id=311444523992710&ev=PageView
+        &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <script src="https://kit.fontawesome.com/f27022c870.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-        <a href="#">
-            <img src="img/Logo scritta.png" alt="" id="logo" class="mx-2">
-          </a>
-          <div class="btn-menu">
-            <a href="">
-              <img src="img\header\telephone.png" alt="">
+<body >
+    <header id="app">
+        <div class="upper-header">
+            <a href="#home">
+                <img src="img/Logo scritta.png" alt="" id="logo" class="mx-2">
             </a>
-            <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it">
-              <img src="img\header\placeholder.png" alt="">
-            </a>
-            <a href="https://qrco.de/bcbqQf ">
-              <img src="img\header\menu.png" alt="">
-            </a>
-          </div>
+            <div class="btn-menu">
+                <a href="tel:0365 187 0283">
+                    <img src="img\header\telephone.png" alt="">
+                </a>
+                <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it">
+                    <img src="img\header\placeholder.png" alt="">
+                </a>
+                <a 
+                @click="toggleMenu">
+                    <img src="img\header\menu.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div v-if="menu_close" 
+        class="lower-menu">
+            <div class="riga">
+                <a href="https://qrco.de/bcbqQf">Menu asporto</a>
+            </div>
+            <div class="riga">
+                <a href="https://qrco.de/bcbqQf">Menu sala</a>
+            </div>
+        </div>
+        <div v-else></div>
     </header>
 
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <img src="img\Logo.png" alt="">
         </section>
      
-        <section class="carousel">
-            <div id="app">
-                <div class="container">
-                    <div class="slider">
-                            <img :src="images[counter]" alt="">
-                            <div class="buttons">   
-                                <div @click="prevSlide" class="prev"> < </div>
-                                <div @click="nextSlide" class="next"> > </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="orari container-fluid">
             <div class="row">
                 <div class="col-12 pb-3 pt-5">
-                    <h2><span>Orari:</span></h2>
+                    <h2><span class="italic">Orari:</span></h2>
                     <div class="line"></div>
                 </div>  
                 <div class="row pb-3">
@@ -76,9 +95,16 @@
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h3 class="pb-3 row-red">Disponibili anche per consegna a domicilio:</h3>
+                        
+                        <h3 class="pb-4">Chiusi di <span class="red">lunedì</span></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="pt-3 pb-3">Con un aggiunta di soli <span class="red"> 2€ </span>la pizza te la portiamo a casa noi</h3>
                         <h2 class="pb-3 hour">18:00 - 20:30</h2>
-                        <h3 class="pb-5">Siamo chiusi il <span>lunedì</span></h3>
+                        <h3>Valido se abiti nei comuni di: </h3>
+                        <h3 class="row-red pb-5">Agnosine, Bione, Preseglie, Odolo e Sabbio Chiese</h3> 
                     </div>
                 </div>
         </section>
@@ -87,7 +113,7 @@
             <h2>Clicca qui per vedere i menù:</h2>
             <div class="line"></div>
             <div class="btn-menu">
-                <a href="" class="btn">Menù <br> Asporto</a>
+                <a href="https://qrco.de/bcbqQf" class="btn">Menù <br> Asporto</a>
                 <a href="https://qrco.de/bcbqQf" class="btn" id="btn-red">Menù <br> Sala</a>
             </div>
         </section>
@@ -97,7 +123,9 @@
                 <div class="box">
                     <h2>Chi siamo:</h2>
                     <div class="line mb-4"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maxime quam earum excepturi blanditiis, ratione dignissimos possimus aliquam, est minus laborum quo quisquam sunt? Cum adipisci reprehenderit maxime doloremque? Natus.</p>
+                    <p>Pizzeria Bella&Buona nasce dalla passione e dall'esperienza pluriennale maturate nel settore della ristorazione da Giuseppe Barbera alias Beppe. <br>
+                        Per molti anni ha già operato in Vallesabbia con Bep's Pizza a Sabbio Chiese, Amalfitana a Vobarno e, dopo un’esperienza in Spagna, è nata l’idea di un nuovo locale con un’innovativa focaccia in teglia. <br>
+                        La professionalità e l’alta formazione hanno permesso a Beppe di diventare un rinomato Master Chef NIP e di vincere due Guinness World Record.</p>
                 </div>
                 <div class="box">
                     <div class="bg" id="bg1"></div>
@@ -110,9 +138,11 @@
                 <div class="box">
                     <h2>I nostri prodotti:</h2>
                     <div class="line mb-4"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maxime quam earum excepturi blanditiis, ratione dignissimos possimus aliquam, est minus laborum quo quisquam sunt? Cum adipisci reprehenderit maxime doloremque? Natus.</p>
-                    <p>Clicca qui sotto per saperne di più sulle nostre teglie!</p>
-                    <a href="" class="btn mb-4">Scopri di più</a>
+                    <p>L'attenta selezione degli ingredienti freschi, di prima qualità e fortemente legati al territorio combinati a numerosi anni di esperienza, permettono di creare un eccellente prodotto capace di soddisfare anche i clienti più esigenti. <br>
+                        Da Bella&Buona è possibile gustare anche pizze vegane, gluten free o senza lattosio. <br>
+                        Per i palati più raffinati è possibile provare Focacce in Teglia in innumerevoli varianti , alte, con un cuore morbido ed una base croccante di autentica passione gastronomica.</p>
+                    <p class="d-none">Clicca qui sotto per saperne di più sulle nostre teglie!</p>
+                    <a href="" class="btn mb-4 d-none">Scopri di più</a>
                 </div>
             </section>
         </div>
@@ -142,19 +172,19 @@
                 <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
                     <img src="img/Logo scritta.png" alt="" class="pt-4 pb-4 px-2">
                     <div class="pb-1 pt-2">© 2021 Pizzeria Bella&Buona di Barbera Giuseppe</div>
-                    <div class="pb-1">P.iva: 000000000</div>
-                    <div>Privacy Policy ....</div>
+                    <div class="pb-1 d-none">P.iva: 000000000</div>
+                    <div class="credits"> Privacy Policy - Cookie Policy - Credits </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
                     <h5>Giorni e orari:</h5>
-                    <div class="pb-1">Aperti tutti i giorni tranne il lunedì</div>
+                    <div class="pb-1 pt-2">Aperti tutti i giorni tranne il lunedì</div>
                     <div class="pb-1">Dalle 11:00 alle 13:30, dalle 17:00 alle 22:30</div>
                     <div>Consegna a domicilio, <br> ogni sera dalle 18:00 alle 20:30</div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
                     <h5>Contatti:</h5>
-                    <div class="pb-2">Via Giuseppe Marconi 10d, Agnosine - BS</div>
-                    <h4>0365 187 0283 </h4>
+                    <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it" id="address">Via Guglielmo Marconi 10d, Agnosine - BS</a>
+                    <h4><a href="tel:0365 187 0283">0365 187 0283 </a></h4>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
                     <h5>Follow us:</h5>
