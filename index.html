@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bella&Buona</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylehome.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +41,7 @@
     </noscript>
     <!-- End Facebook Pixel Code -->
     <script src="https://kit.fontawesome.com/f27022c870.js" crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="vg_ERGtAkuwFkB5c4ZppG9mxB6xFtuXymGNgWeyZ5bs" />
 </head>
 
 <body>       
@@ -50,20 +54,10 @@
         class="burger">
             <i @click="toggleBurger"
             class="fas fa-times"></i>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="#orari">Orari</a>
-                </li>
-                <li>
-                    <a href="#menu">Menu</a>
-                </li>
-                <li>
-                    <a href="eventi.html">Eventi</a>
-                </li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="#orari">Orari</a>
+            <a href="#menu">Menu</a>
+            <a href="eventi.html">Eventi</a>
         </div>
         <img src="img\Logo.png" alt="">
     </header>
@@ -76,13 +70,13 @@
                     <img src="img/Logo scritta.png" alt="" id="logo" class="mx-2">
                 </a>
                 <div class="btn-menu">
-                    <a href="tel:0365 187 0283">
+                    <a href="tel:0365 187 0283" onclick="postcall()">
                         <img src="img\icone\telephone.png" alt="">
                     </a>
                     <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it">
                         <img src="img\icone\placeholder.png" alt="">
                     </a>
-                    <a 
+                    <a class="d-none" 
                     @click="toggleMenu">
                         <img src="img\icone\menu.png" alt="">
                     </a>
@@ -118,7 +112,6 @@
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                        
                         <h3 class="pb-4">Chiusi di <span class="red">lunedì</span></h3>
                     </div>
                 </div>
@@ -136,8 +129,8 @@
             <h2>Clicca qui per vedere i menù:</h2>
             <div class="line"></div>
             <div class="btn-menu">
-                <a href="https://qrco.de/bcbqQf" class="btn">Menù <br> Asporto</a>
-                <a href="https://qrco.de/bcbqQf" class="btn" id="btn-red">Menù <br> Sala</a>
+                <a href="menu/menuasporto.html" class="btn">Menù <br> Asporto</a>
+                <a href="menu/menusala.html" class="btn">Menù <br> Sala</a>
             </div>
         </section>
 
@@ -165,6 +158,11 @@
                     <p>L'attenta selezione degli ingredienti freschi, di prima qualità e fortemente legati al territorio combinati a numerosi anni di esperienza, permettono di creare un eccellente prodotto capace di soddisfare anche i clienti più esigenti. <br>
                         Da Bella&Buona è possibile gustare anche pizze vegane, gluten free o senza lattosio. <br>
                         Per i palati più raffinati è possibile provare Focacce in Teglia in innumerevoli varianti , alte, con un cuore morbido ed una base croccante di autentica passione gastronomica.</p>
+                    <div class="icone">
+                        <img src="img/icone/gluten-free.png" alt="">
+                        <img src="img/icone/lactose-free.png" alt="">
+                        <img src="img/icone/vegan.png" alt="">
+                    </div>
                     <p class="d-none">Clicca qui sotto per saperne di più sulle nostre teglie!</p>
                     <a href="" class="btn mb-4 d-none">Scopri di più</a>
                 </div>
@@ -196,8 +194,8 @@
                 <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
                     <img src="img/Logo scritta.png" alt="" class="pt-4 pb-4 px-2">
                     <div class="pb-1 pt-2">© 2021 Pizzeria Bella&Buona di Barbera Giuseppe</div>
-                    <div class="pb-1 d-none">P.iva: 000000000</div>
-                    <div class="credits"> Privacy Policy - Cookie Policy - Credits </div>
+                    <div class="pb-1">P.iva: 04221520986</div>
+                    <div class="credits"><span><a href="policy/Privacypolicy.html">Privacy Policy</a></span><span> - <a href="policy/Cookiepolicy.html">Cookie Policy</a></span></div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
                     <h5>Giorni e orari:</h5>
@@ -208,7 +206,7 @@
                 <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
                     <h5>Contatti:</h5>
                     <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it" id="address">Via Guglielmo Marconi 10d, Agnosine - BS</a>
-                    <h4><a href="tel:0365 187 0283">0365 187 0283 </a></h4>
+                    <h4><a onclick="postcall()" href="tel:0365 187 0283" >0365 187 0283 </a></h4>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
                     <h5>Follow us:</h5>
@@ -222,5 +220,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/script.js"></script>
     <script src="js/script2.js"></script>
+    <script>
+        function postcall() {
+            window.location.href("https://www.google.com/search?q=ciao&oq=ciao&aqs=chrome..69i57j0i131i433i512j46i175i199i433i512j0i433i512j46i433i512j0i433i512l2j69i60.1451j0j7&sourceid=chrome&ie=UTF-8")
+            console.log('ciao')
+        }
+    </script>
 </body>
 </html>

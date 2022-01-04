@@ -1,0 +1,355 @@
+#home{
+    background-image: url("../img/foto-header.jpg");
+}
+
+main{
+    color: black;
+}
+
+
+/*Inizio Nav*/
+
+.navigator{
+    background-color: rgba(255, 255, 255, 0.959);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.164);  
+}
+
+
+.upper-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.164);   
+}
+
+
+.navigator #logo{
+    width: 80px;
+    height: inherit;
+}
+
+.navigator .btn-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navigator .btn-menu a{
+    width: 40px;
+    height: 100%;
+    margin-right: 15px;  
+    cursor: pointer;
+}
+
+.navigator .btn-menu img{
+    width: 100%;
+    height: 100%;
+}
+
+.lower-nav{
+    width: 100%;
+}
+
+.lower-nav .riga{
+    padding: 10px;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.164); 
+    display: flex;
+    
+}
+
+.lower-nav a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (min-width: 800px) {
+    .navigator{
+        display: none;
+    }
+}
+
+/*Fine Nav*/
+
+/* Inizio Orari */
+
+.orari{
+    background-image: url("../img/sfondo-lavagna.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.orari .line{
+    background-color: white;
+    height: 3px;
+    width: 50%;
+    margin: 0 25%;
+    border-radius: 50px;
+}
+
+.orari .row-red{
+    color: #e30713;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.orari h2{
+    text-transform: uppercase;
+}
+
+.orari .hour{
+    font-size: 38px;
+}
+
+.orari .italic{
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.orari .red{
+    color: #e30713;
+}
+
+@media only screen and (max-width: 800px) {
+    .orari .hour{
+        font-size: 30px;
+    }
+
+    .orari h3{
+        font-size: 20px;
+    }
+}
+
+/* Fine Orari*/
+
+/*Inizio Menu btn section*/
+
+.menu-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;  
+    color: black;
+}
+
+.menu-section h2{
+    text-align: center;
+}
+
+.menu-section .btn-menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    padding-top: 50px;
+}
+
+.menu-section .btn{
+    background-color: #fbb901;
+    border-radius: 5px;
+    width: 32%;
+    color: black;
+    text-transform: uppercase;
+    box-shadow: 1px 1px rgb(102, 101, 101);
+}
+
+.menu-section .btn:hover{
+    background-color: #bd8b03;
+    color: white;
+    font-weight: bolder;
+}
+
+.menu-section .line{
+    background-color: black;
+    height: 3px;
+    width: 50%;
+    margin: 0 30%;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+    .menu-section .btn-menu{
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 710px) {
+    .menu-section .btn-menu{
+        width: 100%;
+    }
+}
+/*Fine menu btn section*/
+
+/*About Us*/
+
+.about-us h2{
+    padding-top: 30px;
+}
+
+.about-us .line{
+    background-color: black;
+    height: 3px;
+    width: 40%;
+    margin: 0 30%;
+    border-radius: 50px;
+}
+
+.about-us .bg{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#bg1{
+    background-image: url("../img/fotobeppe.png");
+}
+
+#bg2{
+    background-image: url("../img/pizza-home.png");
+}
+
+.about-us p{
+    padding: 0 17%;
+}
+
+.about-us .btn{
+    background-color: #e30713;
+    
+    width: 32%;
+}
+
+#AboutUs{
+    background-color: #e30713;
+}
+
+#OurProducts{
+    background-color: #fbb901;
+    margin-bottom: 40px;
+}
+
+.about-us section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us .box{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us .icone{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: none;
+}
+
+.about-us .icone img{
+    padding: 0 10px 30px 10px;
+    width: 20%;
+}
+
+@media only screen and (max-width: 710px) {
+    .about-us p{
+        padding-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .about-us p{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .about-us .icone img{
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    .about-us section{
+        flex-direction: column;
+    }
+
+    .about-us .box{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .about-us .bg{
+        height: 350px;
+        background-position-y: top;
+    }
+
+    .about-us .icone {
+        display: flex;
+    }
+}
+
+
+/*About Us*/
+
+/*Inzio certificati*/
+
+.certificati h2{
+    text-align: center;
+}
+
+.certificati .line{
+    background-color: black;
+    height: 3px;
+    width: 40%;
+    margin: 0 30%;
+    border-radius: 50px;
+}
+
+#elenco{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.certificati img{
+    width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+    .certificati img{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .certificati img{
+        width: 50%;
+    }
+}
+
+/*Fine certificati*/
+

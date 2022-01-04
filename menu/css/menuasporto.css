@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.pc{
+    display: none;
+}
+
+.pc img{
+    width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+    .mobile{
+        display: none;
+    }
+
+    .pc{
+        display: block;
+    }
+}
+
+
