@@ -29,6 +29,7 @@ header .burger{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    z-index: 2;
 }
 
 header a{
@@ -61,6 +62,7 @@ header a:hover{
     animation-name: opacityOn;
     animation-duration: 2s;
     width: 70%;
+    z-index: 1;
 }
 
 @keyframes opacityOn {
@@ -72,27 +74,33 @@ header a:hover{
     }
 }
 
-@media only screen and (min-width: 490px) {
+@media only screen and (min-width: 300px) {
     .home img{
         width: 60%;
     }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 490px) {
     .home img{
-        width: 50%;
+        width: 45%;
     }
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 640px) {
     .home img{
         width: 40%;
     }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 750px) {
     .home img{
         width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .home img{
+        width: 25%;
     }
 }
 

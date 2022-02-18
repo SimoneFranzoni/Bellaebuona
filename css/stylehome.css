@@ -1,7 +1,7 @@
-#home{
+/*#home{
     background-image: url("../img/foto-header.jpg");
 }
-
+*/
 main{
     color: black;
 }
@@ -219,7 +219,7 @@ main{
 }
 
 #bg2{
-    background-image: url("../img/pizza-home.png");
+    background-image: url("../img/foto-prodotti.png");
 }
 
 .about-us p{
@@ -264,7 +264,7 @@ main{
     justify-content: center;
     align-items: center;
     height: 100%;
-    display: none;
+    
 }
 
 .about-us .icone img{
@@ -304,8 +304,11 @@ main{
         background-position-y: top;
     }
 
-    .about-us .icone {
-        display: flex;
+}
+
+@media only screen and (min-width: 912px) {
+    .about-us .icone{
+        display: none;
     }
 }
 
@@ -352,4 +355,18 @@ main{
 }
 
 /*Fine certificati*/
+video.fullscreen {
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+    video.fullscreen::-webkit-media-controls {
+       display:none !important;
+    }
+  
