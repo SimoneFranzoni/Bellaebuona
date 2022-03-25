@@ -47,9 +47,9 @@
 
 <body>       
     <header class="home" id="home">
-        <video class="fullscreen" playsinline autoplay muted loop id="myVideo" >
+        <!--<video class="fullscreen" playsinline autoplay muted loop id="myVideo" >
             <source src="img/video.mp4" type="video/mp4">
-        </video>
+        </video> -->
         <div v-if="burger_close">
             <i @click="toggleBurger"
             class="fas fa-bars"></i>
@@ -61,6 +61,7 @@
             <a href="index.html">Home</a>
             <a href="#orari">Orari</a>
             <a href="#menu">Menu</a>
+            <a href="paginatranci.html">Tranci</a>
             <a href="eventi.html">Eventi</a>
         </div>
         
@@ -139,6 +140,11 @@
             </div>
         </section>
 
+        <section id="banner-tranci">
+            <div>Hai un'attività commerciale e vorresti offrire un prodotto innovativo <br> clicca sul bottone qui sotto per sapere di più</div>
+            <div class="line"></div>
+            <a href="paginatranci.html" class="btn">Clicca qui</a>
+        </section>
 
         <div class="about-us">
             <section class="col-12" id="AboutUs">
@@ -168,8 +174,6 @@
                         <img src="img/icone/lactose-free.png" alt="">
                         <img src="img/icone/vegan.png" alt="">
                     </div>
-                    <p class="d-none">Clicca qui sotto per saperne di più sulle nostre teglie!</p>
-                    <a href="" class="btn mb-4 d-none">Scopri di più</a>
                 </div>
             </section>
         </div>

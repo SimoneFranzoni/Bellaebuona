@@ -1,0 +1,43 @@
+#home{
+    background-image: 
+    linear-gradient(#e30713, #fbb901),
+    url("../img/foto-prodotti.png");
+}    
+
+header .text{
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+}
+
+main .text{
+    padding: 20px;
+    background-color: #fbb901;
+} 
+
+.carousel{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    background-color: black;
+}
+
+.carousel img{
+    width: 60%;
+    margin: 30px 0 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    .carousel img{
+        width: 20%;
+    }
+}

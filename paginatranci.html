@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella&Buona | Tranci</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/stylepaginatranci.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@100;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f27022c870.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header class="home" id="home">
+        <div v-if="burger_close">
+            <i @click="toggleBurger"
+            class="fas fa-bars"></i>
+        </div>
+        <div v-else
+        class="burger">
+            <i @click="toggleBurger"
+            class="fas fa-times"></i>
+            <a href="index.html">Home</a>
+            <a href="index.html#orari">Orari</a>
+            <a href="index.html#menu">Menu</a>
+            <a href="#">Tranci</a>
+            <a href="eventi.html">Eventi</a>
+        </div>
+        <div class="text">
+            Hai un'attività commerciale e vorresti offrire all'interno della tua vetrina un prodotto INNOVATIVO che ti differenzierà dalla concorrenza? <br>
+            Da oggi puoi diventare un rivenditore Ufficiale Bella&Buona. <br> <br>
+            Scorri in giù per saperne di più
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            I tranci di focaccia sono IL PRODOTTO DI PUNTA di Bella&Buona, realizzati grazie ad una RICETTA SEGRETA che li rende unici e inimitabili.
+        </div>
+
+        <section class="carousel">
+            <img src="img/tranci/foto1.jpg" alt="">
+            <img src="img/tranci/foto2.jpg" alt="">
+            <img src="img/tranci/foto3.jpg" alt="">
+            <img src="img/tranci/foto4.jpg" alt="">
+        </section>
+    
+        <div class="text">
+            <ul>
+                <li>Altà visibilità grazie ad un nome affermato</li>
+                <li>Sarai seguito da Giuseppe Barbera un MasterChef Nip che studierà con te i migliori gusti da offrire ai tuoi clienti</li>
+                <li>Possibilità di conservare il prodotto per numerosi giorni</li>
+                <li>Crescita della tua attività iniseme a Bella&Buona che studia e affina nuove strategie di marketing</li>
+            </ul>
+        </div>
+
+        <section class="carousel">
+            <img src="img/tranci/foto5.jpg" alt="">
+            <img src="img/tranci/foto6.jpg" alt="">
+            <img src="img/tranci/foto7.jpg" alt="">
+            <img src="img/tranci/foto8.jpg" alt="">
+        </section>
+
+        <div class="text">
+            Ti forniremo noi il PRODOTTO FINITO, non dovrai far altro che scaldarlo per 3/4 minuti in forno alla massima temperatura o rivenderlo per farlo cuocere in autonomia
+            Avrai la possibilità di vendere nella tua attività un prodotto apprezzato da tutte le tipologie di clienti.
+        </div>
+    
+        <section class="carousel">
+            <img src="img/tranci/foto9.jpg" alt="">
+            <img src="img/tranci/foto10.jpg" alt="">
+            <img src="img/tranci/foto11.jpg" alt="">
+            <img src="img/tranci/foto12.jpg" alt="">
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
+                    <img src="img/Logo scritta.png" alt="" class="pt-4 pb-4 px-2">
+                    <div class="pb-1 pt-2">© 2021 Pizzeria Bella&Buona di Barbera Giuseppe</div>
+                    <div class="pb-1">P.iva: 04221520986</div>
+                    <div class="pb-1 d-none">P.iva: 000000000</div>
+                    <div class="credits"><span><a href="policy/Privacypolicy.html">Privacy Policy</a></span><span> - <a href="policy/Cookiepolicy.html">Cookie Policy</a></span></div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
+                    <h5>Giorni e orari:</h5>
+                    <div class="pb-1 pt-2">Aperti tutti i giorni tranne il lunedì</div>
+                    <div class="pb-1">Dalle 11:00 alle 13:30, dalle 17:00 alle 22:30</div>
+                    <div>Consegna a domicilio, <br> ogni sera dalle 18:00 alle 20:30</div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
+                    <h5>Contatti:</h5>
+                    <a href="https://www.google.com/maps/place/Bella+e+Buona/@45.6497006,10.3504344,17z/data=!3m1!4b1!4m5!3m4!1s0x4781833d9a462701:0x7e1df6494852f91f!8m2!3d45.6497006!4d10.3526231?hl=it" id="address">Via Guglielmo Marconi 10d, Agnosine - BS</a>
+                    <h4><a href="tel:0365 187 0283">0365 187 0283 </a></h4>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 pt-4 pb-4">
+                    <h5>Follow us:</h5>
+                    <a href="https://www.instagram.com/bellaebuonaagnosine/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/bellaebuonaagnosine"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+</body>
+</html>
