@@ -1,19 +1,12 @@
 #home{
-    background-image: 
-    linear-gradient(#e30713, #fbb901),
-    url("../img/foto-prodotti.png");
+    background-image: url("../img/foto-prodotti.png");
 }    
-
-header .text{
-    color: white;
-    text-align: center;
-    padding: 40px;
-    font-size: 20px;
-}
 
 main .text{
     padding: 20px;
+    text-align: center;
     background-color: #fbb901;
+    color: black;
 } 
 
 .carousel{
@@ -28,8 +21,9 @@ main .text{
 }
 
 .carousel img{
-    width: 60%;
-    margin: 30px 0 30px 30px;
+    width: 45%;
+    padding: 10px 5px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -40,4 +34,24 @@ main .text{
     .carousel img{
         width: 20%;
     }
+}
+
+.text .btn{
+    background-color: black;
+    border-radius: 10px;
+    width: 150px;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 2px solid white;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+.text .btn:hover{
+    font-weight: bolder;
+    transform: scale(1.05, 1.1);
+    color: white;
+    background-color: black;
+    border: 2px solid white;
 }
